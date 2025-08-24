@@ -1,0 +1,139 @@
+/* Center align Domain dropdown under its trigger */
+#domainMenuItem { position: relative; }
+#domainMenuItem .hs-mega-menu.main-sub-menu {
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  right: auto !important;
+  overflow: visible;
+}
+
+/* Center the little diamond pointer for Domain menu */
+#domainMenuItem.hs-mega-menu-opened > a.main-link-toggle:before,
+#domainMenuItem.hs-mega-menu-opened > a.main-link-toggle:after,
+#domainMenuItem .hs-mega-menu.main-sub-menu:before,
+#domainMenuItem .hs-mega-menu.main-sub-menu:after {
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%) rotate(45deg) !important;
+}
+
+/* Hide the default trigger arrow for Domain and draw a centered one on the dropdown */
+#domainMenuItem > a.main-link-toggle:before,
+#domainMenuItem > a.main-link-toggle:after {
+  display: none !important;
+}
+
+/* Brand color overrides */
+:root { --brand: #065144; --brand-dark: #043c37; }
+
+#domainMenuItem .hs-mega-menu.main-sub-menu:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  width: 18px;
+  height: 18px;
+  background: var(--brand);
+  border-radius: 3px;
+  z-index: 2;
+}
+
+/* Pricing hero offer: stack currency above amount and refine spacing */
+.offer-box .offer-price .currency {
+  display: block;
+  font-size: 56px;
+  line-height: 1;
+  margin: 0 0 6px 0; /* space below the currency symbol */
+  vertical-align: baseline; /* override upstream middle */
+}
+.offer-box .offer-price .decimal {
+  font-size: 36px; /* smaller decimals */
+  line-height: 1;
+  vertical-align: super; /* ensure superscript look */
+}
+.offer-box .offer-price small {
+  display: inline;
+  margin-left: 10px; /* reduce heavy negative shift from base CSS */
+  font-size: 16px;
+}
+
+/* Global brand color replacements (blue -> #065144) */
+.primary-bg { background: var(--brand) !important; }
+.secondary-bg { background: var(--brand-dark) !important; }
+.color-primary { color: var(--brand) !important; }
+.color-secondary { color: var(--brand-dark) !important; }
+
+a { color: var(--brand); }
+a:hover { color: var(--brand-dark); }
+
+.primary-solid-btn { border-color: var(--brand) !important; background: var(--brand) !important; color: #fff !important; }
+.primary-solid-btn:hover { border-color: var(--brand-dark) !important; background: var(--brand-dark) !important; }
+
+.outline-btn { color: var(--brand) !important; border-color: var(--brand) !important; }
+.outline-btn:hover { background: var(--brand) !important; border-color: var(--brand) !important; color: #fff !important; }
+
+.gradient-bg { background: linear-gradient(90deg, var(--brand-dark), var(--brand)) !important; }
+.gradient-overly-right:before { background: linear-gradient(90deg, var(--brand-dark), rgba(6, 81, 68, 0.5)) !important; }
+.gradient-overly-left:before { background: linear-gradient(90deg, rgba(6, 81, 68, 0.5), var(--brand)) !important; }
+.gradient-overly-bottom:before { background: linear-gradient(to bottom, rgba(6, 81, 68, 0.5), rgba(6, 81, 68, 0.85)) !important; }
+.gradient-overly-top:before { background: linear-gradient(to top, rgba(6, 81, 68, 0.85), rgba(6, 81, 68, 0.5)) !important; }
+
+/* Override Bootstrap primary utilities that leak blue */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.disabled,
+.btn-primary:disabled { background-color: var(--brand) !important; border-color: var(--brand) !important; }
+.btn-outline-primary { color: var(--brand) !important; border-color: var(--brand) !important; }
+.btn-outline-primary:hover,
+.btn-outline-primary:focus { background-color: var(--brand) !important; border-color: var(--brand) !important; }
+.text-primary { color: var(--brand) !important; }
+.bg-primary { background-color: var(--brand) !important; }
+.border-primary { border-color: var(--brand) !important; }
+.badge-primary { background-color: var(--brand) !important; }
+.page-item.active .page-link { background-color: var(--brand) !important; border-color: var(--brand) !important; }
+.page-link { color: var(--brand) !important; }
+.page-link:hover { color: var(--brand-dark) !important; }
+
+/* Radio billing toggle dots */
+.single-radio-box input[type=radio]:checked ~ label .custom-check { border-color: var(--brand) !important; }
+.single-radio-box input[type=radio]:checked ~ label .custom-check::before { color: var(--brand) !important; }
+.single-radio-box input[type=radio]:checked ~ label { background: var(--brand) !important; }
+
+/* Owl carousel dots */
+.custom-dot.owl-theme .owl-dots button.owl-dot.active span,
+.custom-dot.owl-theme .owl-dots button.owl-dot span:hover { background: var(--brand) !important; }
+
+/* Pricing header price color */
+.pricing-header .price { color: var(--brand) !important; }
+
+/* Domain search button and hover overlay */
+.domain-search-form button.search-btn { background: rgba(6, 81, 68, 0.9) !important; border-color: var(--brand) !important; }
+.btn-hover:after, .btn-hover:before { background: rgba(6, 81, 68, 0.9) !important; }
+
+/* Network map pins & ripple */
+.network-map-wrap ul li { background-color: var(--brand) !important; }
+@-webkit-keyframes ripple { 0% { -webkit-box-shadow: 0 0 0 0 rgba(6,81,68,0.1), 0 0 0 10px rgba(6,81,68,0.1), 0 0 0 20px rgba(6,81,68,0.1);} 100% { -webkit-box-shadow: 0 0 0 10px rgba(6,81,68,0.1), 0 0 0 20px rgba(6,81,68,0.1), 0 0 0 30px rgba(6,81,68,0);} }
+@keyframes ripple { 0% { box-shadow: 0 0 0 0 rgba(6,81,68,0.1), 0 0 0 10px rgba(6,81,68,0.1), 0 0 0 20px rgba(6,81,68,0.1);} 100% { box-shadow: 0 0 0 10px rgba(6,81,68,0.1), 0 0 0 20px rgba(6,81,68,0.1), 0 0 0 30px rgba(6,81,68,0);} }
+
+/* Feature tabs (blue borders/background) */
+.feature-new-tab li { border-color: var(--brand) !important; }
+.feature-new-tab li:last-child { border-right-color: var(--brand) !important; }
+.feature-new-tab li.nav-item.show .nav-link,
+.feature-new-tab .nav-link.active { background: var(--brand) !important; }
+
+/* Nav tabs (general) */
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link { color: #fff !important; background-color: var(--brand) !important; border-color: var(--brand) var(--brand) #dee2e6 !important; }
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover { border-color: var(--brand) !important; color: var(--brand) !important; }
+
+/* Mega menu pointer and top border accent */
+.hs-mega-menu-opened a.custom-nav-link:before,
+.bg-transparent .hs-mega-menu-opened a.custom-nav-link:before { background: var(--brand) !important; }
+.title-with-icon-link:hover .menu-item-icon i { color: var(--brand) !important; }
+
+/* Offer box tint to brand */
+.offer-box { background: rgba(6, 81, 68, 0.65) !important; }
+.offer-box:hover { background: rgba(6, 81, 68, 0.75) !important; }
+
