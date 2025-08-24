@@ -106,6 +106,9 @@ a:hover { color: var(--brand-dark); }
 
 /* Pricing header price color */
 .pricing-header .price { color: var(--brand) !important; }
+.pricing-header .price small { color: var(--brand) !important; }
+
+
 
 /* Domain search button and hover overlay */
 .domain-search-form button.search-btn { background: rgba(6, 81, 68, 0.9) !important; border-color: var(--brand) !important; }
@@ -127,6 +130,7 @@ a:hover { color: var(--brand-dark); }
 .nav-tabs .nav-item.show .nav-link { color: #fff !important; background-color: var(--brand) !important; border-color: var(--brand) var(--brand) #dee2e6 !important; }
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover { border-color: var(--brand) !important; color: var(--brand) !important; }
+
 
 /* Mega menu pointer and top border accent */
 .hs-mega-menu-opened a.custom-nav-link:before,
